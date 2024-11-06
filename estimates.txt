@@ -1,0 +1,8 @@
+Minimum RTO for a single AZ outage
+- 60-120 seconds
+Minimum RTO for a single region outage
+- 30 mins to 1 hour
+Minimum RPO for a single AZ outage
+- 0
+Minimum RPO for a single region outage
+- 5 minutes
