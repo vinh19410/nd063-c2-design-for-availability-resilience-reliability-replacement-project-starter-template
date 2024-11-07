@@ -1,0 +1,51 @@
+
+A newer release of "Amazon Linux" is available.
+  Version 2023.6.20241028:
+  Version 2023.6.20241031:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Wed Nov  6 12:00:23 2024 from 18.206.107.29
+[ec2-user@ip-10-1-11-60 ~]$ mysql -h udacity-database.cq0jvslp3maj.us-east-1.rds.amazonaws.com -u admin -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 955
+Server version: 8.0.39 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+MySQL [(none)]> use udacity
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [udacity]> show tables;
++-------------------+
+| Tables_in_udacity |
++-------------------+
+| Persons           |
++-------------------+
+1 row in set (0.002 sec)
+
+MySQL [udacity]> select * from Persons;
++----------+----------+-----------+---------+-------------+
+| PersonID | LastName | FirstName | Address | City        |
++----------+----------+-----------+---------+-------------+
+|        1 | Vinh     | Tran      | Vietnam | Ho Chi Minh |
+|        2 | Vinh     | Tran      | Vietnam | Ho Chi Minh |
++----------+----------+-----------+---------+-------------+
+2 rows in set (0.001 sec)
+
+MySQL [udacity]> 
